@@ -5,6 +5,15 @@ int main(int argc, char *argv[]) {
 	char *argv_2, *argv_3, *argv_4;
 
 	switch (argc) {
+	case 2:
+		if (!strcmp(argv[1], "-testa")) {
+			test_encode_new("linux.bmp", "test_encoded.bmp");
+			break;
+		}
+		if (!strcmp(argv[1], "-testb")) {
+			test_encode_old();
+			break;
+		}
 	case 8:
 		if (!strcmp(argv[1], "-E")) {
 			for (i = 2; i < 8; i++) {
